@@ -14,7 +14,7 @@
     <rosparam>
       filter_field_name: z
       filter_limit_min: 0.01
-      filter_limit_max: 6.0  <!-- Limit the range of points to forward to 6 meters in viewing direction-->
+      filter_limit_max: 1.5  <!-- Limit the range of points to forward to 6 meters in viewing direction-->
       filter_limit_negative: False
       leaf_size: 0.02  <!-- Limit the density to 5 cm-->
     </rosparam>
@@ -30,7 +30,7 @@
   </node>
 
   <!-- Launch visualizations for the resulting elevation map -->
-  <include file="$(find elevation_mapping_demos)/launch/visualization.launch" />
+  <!-- <include file="$(find elevation_mapping_demos)/launch/visualization.launch" /> -->
 
   <!-- Launch plane segmentation node -->
   <include file="$(find convex_plane_decomposition_ros)/launch/convex_plane_decomposition.launch" />

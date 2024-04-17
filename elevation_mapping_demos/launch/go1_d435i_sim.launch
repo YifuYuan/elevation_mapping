@@ -9,7 +9,7 @@
   <!-- Run a passthrough filter to down-sample the sensor point cloud.-->
   <node pkg="nodelet" type="nodelet" name="pcl_manager" args="manager" output="screen"/>
   <node pkg="nodelet" type="nodelet" name="voxel_grid" args="load pcl/VoxelGrid pcl_manager" output="screen">
-    <remap from="~input" to="/camera/depth/color/points"/>
+    <remap from="~input" to="/front_camera/depth/color/points"/>
     <remap from="~output" to="/camera/depth/points_downsampled"/>
     <rosparam>
       filter_field_name: z

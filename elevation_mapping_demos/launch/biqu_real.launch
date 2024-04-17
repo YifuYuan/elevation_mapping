@@ -1,4 +1,7 @@
 <launch>
+  <!-- Launch camera with pointcloud node -->
+  <include file="$(find realsense2_camera)/launch/demo_pointcloud.launch" />
+
 
   <!-- Elevation mapping node -->
   <node pkg="elevation_mapping" type="elevation_mapping" name="elevation_mapping" output="screen">
